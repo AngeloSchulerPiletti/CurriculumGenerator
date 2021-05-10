@@ -1,47 +1,121 @@
-@import './colors';
-@import './fontConfig';
+@import "./colors";
+@import "./fontConfig";
 
-
-*{
-    margin: 0;
-    padding: 0;
-    outline: none;
-    border: none;
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
 }
 
-body{
+body {
+  display: flex;
+  flex-direction: column;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+
+    color: $white;
+    background-color: $red2;
+
+    margin-bottom: 4vw;
+    img {
+      width: 6%;
+      margin-right: 2vw;
+    }
+    h1 {
+      font-size: 2.4vw;
+      @include Title1();
+      sub {
+        @include Font2_I();
+      }
+    }
+  }
+
+  main {
     display: flex;
     flex-direction: column;
+    padding: 0vw 2vw 2vw 2vw;
 
-    
 
-    header{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .section_data {
+      margin-bottom: 6vw;
+
+      h3 {
+        @include Title2();
+        font-size: 2vw;
+      }
+      textarea {
+        resize: none;
+        display: block;
+        width: 40vw;
+        height: 20vw;
+        margin-top: 1.5vw;
         padding: 1vw;
+      }
+      input{
+          width: 20vw;
+          height: 1vw;
+          margin-top: 1.5vw;
+          padding: 0.7vw;
+      }
+      input,
+      textarea {
+        @include Font2();
+        font-size: 1vw;
+
+        border-style: solid;
+        border-radius: 0.2vw;
+        border-width: 1px;
+        
+      }
+      [type="file"]{
+          border: none;
+        width: 28vw;
+      }
+      [name^="title"]{
+          font-size: 1.4vw;
+          height: 1.4vw;
+          font-weight: 500;
+      }
+    }
+    #politic {
+      div {
+          display: flex;
+          align-items: center;
+
+        legend {
+          @include Font1();
+          margin-left: 0.5vw
+        }
+      }
+      button {
+        @include Title2();
+        font-size: 2vw;
+
+        padding: 0.8vw;
+        margin-top: 2vw;
+        border-radius: 0.4vw;
 
         background-color: $red2;
+        box-shadow: 5px 5px 10px $gray2;
+        color: $white;
 
-        margin-bottom: 4vw;
-        img{
-            width: 6%;
+        transition-property: box-shadow, background-color;
+        transition-duration: 500ms;
+
+        &:hover{
+            background-color: $black;
+            box-shadow: none;
+            cursor: pointer;
         }
-        h1{
-            font-size: 2.4vw;
-            @include Title1();
-            sub{
-                @include Font2_I();
-            }
+        &:active{
+            background-color: $gray1;
         }
+      }
     }
-
-
-    main{
-        display: flex;
-        flex-direction: column;
-        padding: 0vw 2vw 2vw 2vw;
-    }
-    
-
+  }
 }

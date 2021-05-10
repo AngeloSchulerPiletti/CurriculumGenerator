@@ -27,12 +27,14 @@ body header {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1vw;
+  color: #ffffff;
   background-color: #e0092d;
   margin-bottom: 4vw;
 }
 
 body header img {
   width: 6%;
+  margin-right: 2vw;
 }
 
 body header h1 {
@@ -56,5 +58,97 @@ body main {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0vw 2vw 2vw 2vw;
+}
+
+body main .section_data {
+  margin-bottom: 6vw;
+}
+
+body main .section_data h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 2vw;
+}
+
+body main .section_data textarea {
+  resize: none;
+  display: block;
+  width: 40vw;
+  height: 20vw;
+  margin-top: 1.5vw;
+  padding: 1vw;
+}
+
+body main .section_data input {
+  width: 20vw;
+  height: 1vw;
+  margin-top: 1.5vw;
+  padding: 0.7vw;
+}
+
+body main .section_data input,
+body main .section_data textarea {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1vw;
+  border-style: solid;
+  border-radius: 0.2vw;
+  border-width: 1px;
+}
+
+body main .section_data [type="file"] {
+  border: none;
+  width: 28vw;
+}
+
+body main .section_data [name^="title"] {
+  font-size: 1.4vw;
+  height: 1.4vw;
+  font-weight: 500;
+}
+
+body main #politic div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #politic div legend {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-left: 0.5vw;
+}
+
+body main #politic button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 2vw;
+  padding: 0.8vw;
+  margin-top: 2vw;
+  border-radius: 0.4vw;
+  background-color: #e0092d;
+  -webkit-box-shadow: 5px 5px 10px #858585;
+          box-shadow: 5px 5px 10px #858585;
+  color: #ffffff;
+  -webkit-transition-property: background-color, -webkit-box-shadow;
+  transition-property: background-color, -webkit-box-shadow;
+  transition-property: box-shadow, background-color;
+  transition-property: box-shadow, background-color, -webkit-box-shadow;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+body main #politic button:hover {
+  background-color: #050505;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+
+body main #politic button:active {
+  background-color: #383838;
 }
 /*# sourceMappingURL=index.css.map */
