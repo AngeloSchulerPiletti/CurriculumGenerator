@@ -43,6 +43,18 @@ body {
 
     .section_data {
       margin-bottom: 6vw;
+      display: flex;
+      align-items: flex-start;
+
+      .div_container{
+          width: fit-content;
+      }
+      .info2, #info1{
+          width: 1.4vw;
+          &:hover{
+              cursor: pointer;
+          }
+      }
 
       h3 {
         @include Title2();
@@ -89,7 +101,8 @@ body {
 
         legend {
           @include Font1();
-          margin-left: 0.5vw
+          margin-left: 0.5vw;
+          font-size: 1.4vw;
         }
       }
       button {
