@@ -1,13 +1,3 @@
-<?php
-// session_destroy();
-// if (isset($errors)) {
-
-//     if (count($errors) > 0) {
-//         print_r($errors);
-//     }
-// }
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,42 +12,45 @@
 
     <title>Curriculum</title>
 </head>
-<?php 
+<?php
 
 ?>
+
 <body>
     <div id="info_container">
         <p id="message"></p>
     </div>
 
     <header>
-        <img src="/assets/favicon/employee.svg" width="100px">
-        <h1>CURRICULUM <sub>GENERATOR</sub></h1>
+        <a href="/">
+            <img src="/assets/favicon/employee.svg" width="100px">
+            <h1>CURRICULUM <sub>GENERATOR</sub></h1>
+        </a>
     </header>
     <main>
         <?php
         include 'App/Routes/Web.php';
 
         solveURL();
-        
-        
-    // if(isset($_POST)){
-    //     if($_POST['DO_THIS'] == "clear"){
-    //         echo '1';
-    //         require 'resources/template/home.php';
-    //     }
-    //     else if($_POST['DO_THIS'] == 'keep'){
-    //         echo '2';
-    //         require 'resources/template/home.php';
-    //     }
-    //     else if($_POST['DO_THIS'] == 'check'){
-    //         echo '3';
-    //         require 'resources/template/curriculumModel.php';
-    //     }
-    //     else{
 
-    //     }
-    // }
+
+        // if(isset($_POST)){
+        //     if($_POST['DO_THIS'] == "clear"){
+        //         echo '1';
+        //         require 'resources/template/home.php';
+        //     }
+        //     else if($_POST['DO_THIS'] == 'keep'){
+        //         echo '2';
+        //         require 'resources/template/home.php';
+        //     }
+        //     else if($_POST['DO_THIS'] == 'check'){
+        //         echo '3';
+        //         require 'resources/template/curriculumModel.php';
+        //     }
+        //     else{
+
+        //     }
+        // }
         ?>
     </main>
     <footer></footer>
