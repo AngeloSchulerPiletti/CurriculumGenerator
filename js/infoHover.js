@@ -7,14 +7,13 @@ var infoContainer = document.getElementById("info_container"),
 function infoHover(el) {
     xContainer = el.clientX;
     yContainer = el.clientY;
-    // console.log(xContainer, yContainer)
 
     infoContainer.style.left = xContainer + "px";
     infoContainer.style.top = yContainer + "px";
     infoContainer.style.display = "block";
 
     
-    if(el.id == ""){
+    if(el.toElement.id == ""){
         message = "Na seção, você pode criar um título próprio para seu objetivo e uma respectiva mensagem";
 
     }

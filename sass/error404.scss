@@ -1,0 +1,32 @@
+@import './colors';
+@import './fontConfig';
+
+
+main{
+    margin: auto;
+    margin-top: 20vh;
+    width: 50vw;
+
+    display: flex;
+
+    img{
+        width: 20vw;
+        margin-right: 4vw;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        h1{
+            @include Title2();
+            font-size: 3.5vw;
+            color: $red2
+
+        }
+        p{
+            @include Font1();
+            font-size: 1.8vw;
+            text-align: justify;
+            margin-top: 1.2vw;
+        }
+    }
+}
