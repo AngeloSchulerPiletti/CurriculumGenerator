@@ -1,0 +1,29 @@
+<?php 
+
+?>
+<header>
+    CURRICULUM MODEL
+        <img>
+        <div>
+            <h6></h6>
+            <h6></h6>
+            <h6></h6>
+            <h6></h6>
+            <h6></h6>
+            <h6></h6>
+        </div>
+</header>
+    <article>
+        <section>
+            <h3></h3>
+            <p></p>
+        </section>
+        <section>
+            <h3></h3>
+            <p></p>
+        </section>
+        <section>
+            <h3></h3>
+            <p></p>
+        </section>
+    </article>
