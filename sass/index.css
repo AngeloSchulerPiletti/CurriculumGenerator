@@ -60,6 +60,52 @@ body main {
   padding: 0vw 2vw 2vw 2vw;
 }
 
+body main #form_errors {
+  position: fixed;
+  width: 25vw;
+  top: 2vw;
+  right: 2vw;
+}
+
+body main #form_errors button {
+  width: 100%;
+  text-align: right;
+  background-color: transparent;
+  color: #050505;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.2vw;
+}
+
+body main #form_errors div #messagesContainer div {
+  padding: 0.6vw;
+  color: #e0092d;
+  border-width: 0.1vw;
+  margin-bottom: 1vw;
+  background-image: linear-gradient(45deg, #adadad, #e0e0e0);
+}
+
+body main #form_errors div #messagesContainer div p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1vw;
+}
+
+body main #form_errors div div:first-child {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#383838), to(#272727));
+  background-image: linear-gradient(180deg, #383838, #272727);
+  color: #ffffff;
+  margin-bottom: 1vw;
+  padding: 0.6vw;
+}
+
+body main #form_errors div div:first-child h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 2vw;
+}
+
 body main .section_data {
   margin-bottom: 6vw;
   display: -webkit-box;
@@ -76,11 +122,13 @@ body main .section_data .div_container {
   width: fit-content;
 }
 
-body main .section_data .info2, body main .section_data #info1 {
+body main .section_data .info2,
+body main .section_data #info1 {
   width: 1.4vw;
 }
 
-body main .section_data .info2:hover, body main .section_data #info1:hover {
+body main .section_data .info2:hover,
+body main .section_data #info1:hover {
   cursor: pointer;
 }
 
@@ -151,8 +199,8 @@ body main #politic button {
   margin-top: 2vw;
   border-radius: 0.4vw;
   background-color: #e0092d;
-  -webkit-box-shadow: 5px 5px 10px #858585;
-          box-shadow: 5px 5px 10px #858585;
+  -webkit-box-shadow: 5px 5px 10px #272727;
+          box-shadow: 5px 5px 10px #272727;
   color: #ffffff;
   -webkit-transition-property: background-color, -webkit-box-shadow;
   transition-property: background-color, -webkit-box-shadow;

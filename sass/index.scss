@@ -40,20 +40,65 @@ body {
     flex-direction: column;
     padding: 0vw 2vw 2vw 2vw;
 
+    #form_errors {
+      position: fixed;
+      width: 25vw;
+      top: 2vw;
+      right: 2vw;
 
+      button {
+        width: 100%;
+        text-align: right;
+        background-color: transparent;
+        color: $black;
+
+        cursor: pointer;
+
+        @include Title1();
+        font-size: 1.2vw;
+      }
+      div {
+        #messagesContainer {
+          div {
+            padding: 0.6vw;
+            color: $red2;
+            border-width: 0.1vw;
+            margin-bottom: 1vw;
+            background-image: linear-gradient(45deg, $gray3, $gray4);
+
+            p {
+              @include Font1();
+              font-size: 1vw;
+            }
+          }
+        }
+        div:first-child {
+          background-image: linear-gradient(180deg, $gray1, $gray2);
+          color: $white;
+          margin-bottom: 1vw;
+          padding: 0.6vw;
+
+          h1 {
+            @include Font1();
+            font-size: 2vw;
+          }
+        }
+      }
+    }
     .section_data {
       margin-bottom: 6vw;
       display: flex;
       align-items: flex-start;
 
-      .div_container{
-          width: fit-content;
+      .div_container {
+        width: fit-content;
       }
-      .info2, #info1{
-          width: 1.4vw;
-          &:hover{
-              cursor: pointer;
-          }
+      .info2,
+      #info1 {
+        width: 1.4vw;
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       h3 {
@@ -68,11 +113,11 @@ body {
         margin-top: 1.5vw;
         padding: 1vw;
       }
-      input{
-          width: 20vw;
-          height: 1vw;
-          margin-top: 1.5vw;
-          padding: 0.7vw;
+      input {
+        width: 20vw;
+        height: 1vw;
+        margin-top: 1.5vw;
+        padding: 0.7vw;
       }
       input,
       textarea {
@@ -82,22 +127,21 @@ body {
         border-style: solid;
         border-radius: 0.2vw;
         border-width: 1px;
-        
       }
-      [type="file"]{
-          border: none;
+      [type="file"] {
+        border: none;
         width: 28vw;
       }
-      [name^="title"]{
-          font-size: 1.4vw;
-          height: 1.4vw;
-          font-weight: 500;
+      [name^="title"] {
+        font-size: 1.4vw;
+        height: 1.4vw;
+        font-weight: 500;
       }
     }
     #politic {
       div {
-          display: flex;
-          align-items: center;
+        display: flex;
+        align-items: center;
 
         legend {
           @include Font1();
@@ -120,13 +164,13 @@ body {
         transition-property: box-shadow, background-color;
         transition-duration: 500ms;
 
-        &:hover{
-            background-color: $black;
-            box-shadow: none;
-            cursor: pointer;
+        &:hover {
+          background-color: $black;
+          box-shadow: none;
+          cursor: pointer;
         }
-        &:active{
-            background-color: $gray1;
+        &:active {
+          background-color: $gray1;
         }
       }
     }

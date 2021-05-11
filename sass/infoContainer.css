@@ -3,7 +3,7 @@
   display: none;
   position: fixed;
   z-index: 100;
-  background-image: linear-gradient(45deg, #383838, #858585, #383838);
+  background-image: linear-gradient(45deg, #383838, #272727, #383838);
   width: 25vw;
   padding: 1vw;
   border-color: #050505;

@@ -40,9 +40,7 @@
 
         solveURL();
         
-        if(isset($_POST['FORM_ERRORS'])){
-            print_r($_POST['FORM_ERRORS']);
-        }
+        
     // if(isset($_POST)){
     //     if($_POST['DO_THIS'] == "clear"){
     //         echo '1';
