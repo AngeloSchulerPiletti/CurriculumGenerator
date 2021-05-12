@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/sass/index.css">
     <link rel="stylesheet" href="/sass/infoContainer.css">
-    <link rel="shortcut icon" href="/assets/favicon/employee (1).svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/favicon/icon.svg" type="image/x-icon">
 
 
     <title>Curriculum</title>
