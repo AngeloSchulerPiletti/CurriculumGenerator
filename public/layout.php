@@ -33,24 +33,6 @@
 
         solveURL();
 
-
-        // if(isset($_POST)){
-        //     if($_POST['DO_THIS'] == "clear"){
-        //         echo '1';
-        //         require 'resources/template/home.php';
-        //     }
-        //     else if($_POST['DO_THIS'] == 'keep'){
-        //         echo '2';
-        //         require 'resources/template/home.php';
-        //     }
-        //     else if($_POST['DO_THIS'] == 'check'){
-        //         echo '3';
-        //         require 'resources/template/curriculumModel.php';
-        //     }
-        //     else{
-
-        //     }
-        // }
         ?>
     </main>
     <footer></footer>

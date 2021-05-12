@@ -1,0 +1,65 @@
+@mixin curriculumStyle {
+  #curriculo {
+    width: 50%;
+    margin: auto;
+
+    background-color: $gray4;
+    padding: 2vw;
+
+    border-style: solid;
+    border-color: $black;
+    border-width: 0.2vw;
+
+    header {
+      background-color: transparent;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1vw;
+      border-radius: 0.3vw 0.3vw 0 0;
+
+      #curriculum_photo {
+        width: 12vw;
+        height: 16vw;
+
+        border-color: $black;
+        border-width: 0.1vw;
+        border-style: solid;
+
+        flex-grow: 0;
+      }
+      div {
+          flex-grow: 1;
+          margin-left: 2vw;
+          
+        h6 {
+          @include Font1();
+          font-size: 1.6vw;
+
+          margin-bottom: 0.5vw;
+        }
+      }
+    }
+    hr {
+      border: none;
+      width: 100%;
+      height: 0.05vw;
+      background-color: $gray2;
+
+      margin: auto;
+    }
+    article {
+      border-radius: 0 0 0.3vw 0.3vw;
+      margin-top: 2vw;
+
+      h3 {
+        @include Title2();
+        font-size: 2.4vw;
+        margin-bottom: 1vw;
+      }
+      p {
+        @include Font1();
+        font-size: 1.4vw;
+      }
+    }
+  }
+}

@@ -3,12 +3,13 @@ $inputs = [
     "picture", "name", "from", "birth", "phone", "email", "link", "title1",
     "text1", "title2", "text2", "title3", "text3"
 ];
+
 ?>
 
 <section id="curriculo">
     <header>
-        CURRICULUM MODEL
-        <img>
+        
+        <img id="curriculum_photo" src="public/uploads/<?php echo $_FILES['picture']['name'] ?>">
         <div>
             <?php
             $inputs = [
@@ -28,6 +29,7 @@ $inputs = [
 
         </div>
     </header>
+    <hr>
     <article>
         <?php
         $inputs = [
@@ -35,10 +37,9 @@ $inputs = [
         ];
 
         foreach ($_POST as $key => $value) {
-            if ($value != "") {
-                echo "<section>";
-                foreach ($inputs as $field) {
-                    if ($key == $field) {
+            foreach ($inputs as $field) {
+                if ($key == $field) {
+                    if ($value != "") {
                         if (str_contains($key, "title")) {
                             echo "<h3>" . $value . "</h3>";
                         } else if (str_contains($key, "text")) {
@@ -46,7 +47,7 @@ $inputs = [
                         }
                     }
                 }
-                echo "</section>";
+                
             }
         }
 

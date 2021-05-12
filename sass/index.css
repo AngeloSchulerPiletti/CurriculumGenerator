@@ -16,6 +16,79 @@ body {
           flex-direction: column;
 }
 
+body #curriculo {
+  width: 50%;
+  margin: auto;
+  background-color: #e0e0e0;
+  padding: 2vw;
+  border-style: solid;
+  border-color: #050505;
+  border-width: 0.2vw;
+}
+
+body #curriculo header {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1vw;
+  border-radius: 0.3vw 0.3vw 0 0;
+}
+
+body #curriculo header #curriculum_photo {
+  width: 12vw;
+  height: 16vw;
+  border-color: #050505;
+  border-width: 0.1vw;
+  border-style: solid;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+body #curriculo header div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 2vw;
+}
+
+body #curriculo header div h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.6vw;
+  margin-bottom: 0.5vw;
+}
+
+body #curriculo hr {
+  border: none;
+  width: 100%;
+  height: 0.05vw;
+  background-color: #272727;
+  margin: auto;
+}
+
+body #curriculo article {
+  border-radius: 0 0 0.3vw 0.3vw;
+  margin-top: 2vw;
+}
+
+body #curriculo article h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 2.4vw;
+  margin-bottom: 1vw;
+}
+
+body #curriculo article p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.4vw;
+}
+
 body header {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -12,7 +12,7 @@
 
 </div>
 
-<form method="POST" action="/curriculo">
+<form method="POST" enctype="multipart/form-data" action="/curriculo">
     <section class="section_data" id="sec_1">
         <div class="div_container">
             <h3>Escolha uma linda foto!</h3>
