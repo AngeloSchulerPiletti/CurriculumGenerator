@@ -21,7 +21,7 @@
         <p id="message"></p>
     </div>
 
-    <header>
+    <header id="layoutHeader">
         <a href="/">
             <img src="/assets/favicon/employee.svg" width="100px">
             <h1>CURRICULUM <sub>GENERATOR</sub></h1>

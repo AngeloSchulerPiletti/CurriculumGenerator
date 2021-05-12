@@ -13,10 +13,9 @@ class imageChecker
         $maxSize = 2000000;
 
         if ($archive) {
-            if ($archive['error'] < 0) {
+            if ($archive['error'] == 0) {
                 if (preg_match("^image\/(jpg|jpeg|png|gif)$^", $archive['type'])) {
                     if ($archive['size'] < $maxSize) {
-                        echo $archive['size'];
                         $notifications = "passed";
                     } else {
                         $notifications = "O arquivo deve ter até 2MB. Você pode compactar seu arquivo em diversos sites, sugerimos o tinypng.com.";
