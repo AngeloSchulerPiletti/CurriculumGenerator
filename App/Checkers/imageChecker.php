@@ -1,24 +1,36 @@
 <?php
+
 namespace App\Checkers;
 
 
 
 
-class imageChecker{
-    public function checkImage(){
-        $erros = array();
+class imageChecker
+{
+    public function checkImage($archive)
+    {
+        $notifications = "";
+        $maxSize = 2000000;
 
-
-
-        $archive = isset($_FILES['picture']) ? $_FILES['picture'] : null;
-
-        if($archive){
-            return "";
+        if ($archive) {
+            if ($archive['error'] < 0) {
+                if (preg_match("^image\/(jpg|jpeg|png|gif)$^", $archive['type'])) {
+                    if ($archive['size'] < $maxSize) {
+                        echo $archive['size'];
+                        $notifications = "passed";
+                    } else {
+                        $notifications = "O arquivo deve ter até 2MB. Você pode compactar seu arquivo em diversos sites, sugerimos o tinypng.com.";
+                    }
+                } else {
+                    $notifications = "Escolha um formato válido: JPG, JPEG, PNG ou até GIF!";
+                }
+            } 
+            else {
+                $notifications = "Escolha uma foto para o seu currículo!";
+            }
+        } else {
+            $notifications = "Escolha uma foto para o seu currículo!";
         }
-        else{
-            $erros[] = "Escolha uma foto para o seu currículo!";
-            
-        }
-        return $erros;
+        return $notifications;
     }
 }

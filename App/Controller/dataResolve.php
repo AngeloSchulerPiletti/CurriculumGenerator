@@ -1,5 +1,6 @@
 <?php
 include 'App/Checkers/imageChecker.php';
+
 use App\Checkers\imageChecker;
 
 
@@ -29,23 +30,20 @@ function solveForm()
         "text1" => "Escreva algo na seção 1.",
     ];
 
+    $archive = isset($_FILES['picture']) ? $_FILES['picture'] : null;
 
-    // $uploadVerify = new imageChecker();
-    // $uploadVerify->checkImage();    
+    $uploadVerify = new imageChecker();
+    $checkedImage = $uploadVerify->checkImage($archive);
 
-
-
-    if (isset($_FILES['picture'])) {
-        if ($_FILES['picture']['error'] == 0) {
-            $uploadDestiny = 'public/uploads/' . $_FILES['picture']['name'];
-            $pic_tmp = $_FILES['picture']['tmp_name'];
-            move_uploaded_file($pic_tmp, $uploadDestiny);
-        } else {
-            $formErrors['picture'] = 'Escolha uma foto de até 2MB para o seu currículo!';
-        }
-    } else {
-        $formErrors['picture'] = 'Escolha uma foto de até 2MB para o seu currículo!';
+    if ($checkedImage == "passed") {
+        $uploadDestiny = 'public/uploads/' . $archive['name'];
+        $pic_tmp = $archive['tmp_name'];
+        move_uploaded_file($pic_tmp, $uploadDestiny);
+    } 
+    else {
+        $formErrors['picture'] = $checkedImage;
     }
+
 
 
     foreach ($inputs as $value) {

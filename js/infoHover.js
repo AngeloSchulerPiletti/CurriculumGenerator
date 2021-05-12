@@ -18,7 +18,7 @@ function infoHover(el) {
 
     }
     else {
-        message = "Adicione uma foto 3x4 com até 1.5MB de tamanho para compor seu currículo";
+        message = "Adicione uma foto 3x4 com até 2MB de tamanho para compor seu currículo";
     }
     infoContainer.querySelector("p").innerHTML = message;
 }
