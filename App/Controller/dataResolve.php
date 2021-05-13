@@ -31,7 +31,6 @@ function solveForm()
     ];
 
 
-
     //The Inputs Informations are saved at session
     $allInputs = $_SESSION['allInputs'];
     foreach ($_POST as $key => $value) {
@@ -61,6 +60,17 @@ function solveForm()
     }
 
 
+    //The birth is formatted
+    if($_POST['birth'] != ""){
+        $aniver = $_POST['birth'];
+
+        $arrAniver = explode("-", $aniver);
+        $newAniver = $arrAniver[2].'/'.$arrAniver[1].'/'.$arrAniver[0];
+
+        $_POST['birth'] = $newAniver;
+    }
+
+
     //ERRORS and PATHS solve
     foreach ($inputs as $value) {
         if (isset($formErrors[$value])) {
@@ -80,17 +90,6 @@ function solveForm()
     }
 
     //If there is no error, it returns the curriculum
-    // $inputs = $_SESSION['allInputs'];
 
-
-    // foreach ($_POST as $key => $value) {
-    //     foreach ($inputs as $field) {
-    //         if ($key == $field) {
-    //             if ($value != "") {
-    //                 $_SESSION['formEdition'][$key] = $value;
-    //             }
-    //         }
-    //     }
-    // }
     return ["resources/template/curriculumModel.php"];
 }

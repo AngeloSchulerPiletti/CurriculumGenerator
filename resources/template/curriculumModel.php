@@ -12,12 +12,26 @@
             $inputs = [
                 "picture", "name", "from", "birth", "phone", "email", "link",
             ];
+            $inputsTrad = [
+                "picture" => "", 
+                "name" => "", 
+                "from" => "Local: ", 
+                "birth" => "Nascimento: ", 
+                "phone" => "Telefone: ", 
+                "email" => "Email: ", 
+                "link" => "Perfil: ",
+            ];
 
             foreach ($_POST as $key => $value) {
                 if ($value != "") {
                     foreach ($inputs as $field) {
                         if ($key == $field) {
-                            echo "<h6>" . $value . "</h6>";
+                            foreach($inputsTrad as $engKey => $portKey){
+                                if($field == $engKey){
+                                    echo "<h6><h6type>". $portKey. "</h6type>" . $value . "</h6>";
+                                }
+                            }
+                           
                         }
                     }
                 }
