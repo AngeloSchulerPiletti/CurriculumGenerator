@@ -1,0 +1,75 @@
+@mixin formErrorsStyle {
+  @keyframes here {
+    0% {
+      opacity: 0;
+      transform: translateY(-2vw);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes nothere {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-2vw);
+    }
+  }
+
+  #form_errors {
+    position: fixed;
+    width: 25vw;
+    top: 2vw;
+    right: 2vw;
+
+    button {
+      width: 100%;
+      text-align: right;
+      background-color: transparent;
+      color: $black;
+
+      cursor: pointer;
+
+      @include Title1();
+      font-size: 1.2vw;
+    }
+    div {
+      #messagesContainer {
+        div {
+          padding: 0.6vw;
+          color: $red2;
+          border-width: 0.1vw;
+          margin-bottom: 1vw;
+          background-image: linear-gradient(45deg, $gray3, $gray4);
+
+          p {
+            @include Font1();
+            font-size: 1vw;
+          }
+        }
+      }
+      div:first-child {
+        background-image: linear-gradient(180deg, $gray1, $gray2);
+        color: $white;
+        margin-bottom: 1vw;
+        padding: 0.6vw;
+
+        h1 {
+          @include Font1();
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+
+  [data-anim="hide"] {
+    animation: nothere 800ms ease-in 0ms 1 normal both;
+  }
+  [data-anim="show"] {
+    animation: here 400ms ease-in-out 0ms 1 normal both;
+  }
+}

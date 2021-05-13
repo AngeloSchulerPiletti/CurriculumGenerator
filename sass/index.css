@@ -186,6 +186,58 @@ body main {
   padding: 0vw 2vw 2vw 2vw;
 }
 
+@-webkit-keyframes here {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2vw);
+            transform: translateY(-2vw);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes here {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2vw);
+            transform: translateY(-2vw);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes nothere {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2vw);
+            transform: translateY(-2vw);
+  }
+}
+
+@keyframes nothere {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2vw);
+            transform: translateY(-2vw);
+  }
+}
+
 body main #form_errors {
   position: fixed;
   width: 25vw;
@@ -230,6 +282,16 @@ body main #form_errors div div:first-child h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 2vw;
+}
+
+body main [data-anim="hide"] {
+  -webkit-animation: nothere 800ms ease-in 0ms 1 normal both;
+          animation: nothere 800ms ease-in 0ms 1 normal both;
+}
+
+body main [data-anim="show"] {
+  -webkit-animation: here 400ms ease-in-out 0ms 1 normal both;
+          animation: here 400ms ease-in-out 0ms 1 normal both;
 }
 
 body main .section_data {

@@ -1,7 +1,7 @@
 
 
 
-<div id="form_errors" style="display: none;">
+<div id="form_errors" style="display: none;" data-anim="">
     <button id="close_form_errors">X</button>
     <div>
         <div>
@@ -129,7 +129,7 @@
         for(let i = 0; i < objectSize; i++){
             inputsToLoad.push(document.getElementById(nameOfInputs[i]));
         }
-        console.log(inputsToLoad);
+        
 
         inputsToLoad.forEach(function(element, index){
             let adress = element.getAttribute('name');
@@ -152,6 +152,8 @@
     function showErrorsForm() {
         if (errorMessages.length > 0) {
             errorMessagesContainer.style.display = "block";
+            errorMessagesContainer.dataset.anim = "show";
+            console.log(errorMessagesContainer.dataset);
             errorMessages.forEach(function(mensagem) {
                 if(mensagem != ""){
                     insertMessageHere.innerHTML += "<div><p>" + mensagem + "</p><div>";
@@ -161,7 +163,11 @@
     }
 
     function closeErrorsForm() {
-        errorMessagesContainer.style.display = "none";
+        errorMessagesContainer.dataset.anim = "hide";
+        setTimeout(function(){
+            errorMessagesContainer.style.display = "none";
+        }, 1000)
+        
     }
 
     showErrorsForm();

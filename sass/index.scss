@@ -1,6 +1,7 @@
 @import "./colors";
 @import "./fontConfig";
 @import './curriculumStyle';
+@import "./formErrors";
 
 * {
   margin: 0;
@@ -49,51 +50,10 @@ body {
     flex-direction: column;
     padding: 0vw 2vw 2vw 2vw;
 
-    #form_errors {
-      position: fixed;
-      width: 25vw;
-      top: 2vw;
-      right: 2vw;
 
-      button {
-        width: 100%;
-        text-align: right;
-        background-color: transparent;
-        color: $black;
-
-        cursor: pointer;
-
-        @include Title1();
-        font-size: 1.2vw;
-      }
-      div {
-        #messagesContainer {
-          div {
-            padding: 0.6vw;
-            color: $red2;
-            border-width: 0.1vw;
-            margin-bottom: 1vw;
-            background-image: linear-gradient(45deg, $gray3, $gray4);
-
-            p {
-              @include Font1();
-              font-size: 1vw;
-            }
-          }
-        }
-        div:first-child {
-          background-image: linear-gradient(180deg, $gray1, $gray2);
-          color: $white;
-          margin-bottom: 1vw;
-          padding: 0.6vw;
-
-          h1 {
-            @include Font1();
-            font-size: 2vw;
-          }
-        }
-      }
-    }
+    @include formErrorsStyle();
+    
+    
     .section_data {
       margin-bottom: 6vw;
       display: flex;
