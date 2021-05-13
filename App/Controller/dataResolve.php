@@ -30,6 +30,23 @@ function solveForm()
         "text1" => "Escreva algo na seção 1.",
     ];
 
+
+
+    //The Inputs Informations are saved at session
+    $allInputs = $_SESSION['allInputs'];
+    foreach ($_POST as $key => $value) {
+        foreach ($allInputs as $field) {
+            if ($key == $field) {
+                if ($value != "") {
+                    $_SESSION['formEdition'][$key] = $value;
+                }
+            }
+        }
+    }
+
+
+
+    //IMAGE PROCEDENCE CHECK
     $archive = isset($_FILES['picture']) ? $_FILES['picture'] : null;
 
     $uploadVerify = new imageChecker();
@@ -39,13 +56,12 @@ function solveForm()
         $uploadDestiny = 'public/uploads/' . $archive['name'];
         $pic_tmp = $archive['tmp_name'];
         move_uploaded_file($pic_tmp, $uploadDestiny);
-    } 
-    else {
+    } else {
         $formErrors['picture'] = $checkedImage;
     }
 
 
-
+    //ERRORS and PATHS solve
     foreach ($inputs as $value) {
         if (isset($formErrors[$value])) {
             if ($_POST[$value] == "") {
@@ -58,8 +74,23 @@ function solveForm()
     }
     foreach ($formErrors as $key => $value) {
         if ($value != "") {
+            //If there is an error, returns the home
             return ["resources/template/home.php", $formErrors];
         }
     }
+
+    //If there is no error, it returns the curriculum
+    // $inputs = $_SESSION['allInputs'];
+
+
+    // foreach ($_POST as $key => $value) {
+    //     foreach ($inputs as $field) {
+    //         if ($key == $field) {
+    //             if ($value != "") {
+    //                 $_SESSION['formEdition'][$key] = $value;
+    //             }
+    //         }
+    //     }
+    // }
     return ["resources/template/curriculumModel.php"];
 }

@@ -1,3 +1,14 @@
+<?php 
+$_SESSION['allInputs'] = [
+    "picture", "name", "from", "birth", "phone", "email", "link", "title1",
+    "text1", "title2", "text2", "title3", "text3"
+];
+
+$_SESSION['requiredInputs'] = [
+    "title1", "text1", "title2", "text2", "title3", "text3"
+];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

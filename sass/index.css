@@ -55,6 +55,10 @@ body #curriculo header div {
   margin-left: 2vw;
 }
 
+body #curriculo header div h6:first-child {
+  font-size: 2vw;
+}
+
 body #curriculo header div h6 {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -89,6 +93,43 @@ body #curriculo article p {
   font-weight: 400;
   font-size: 1.4vw;
   text-align: justify;
+}
+
+body #goToEdit {
+  position: fixed;
+  bottom: 2.4vw;
+  left: 2.4vw;
+}
+
+body #goToEdit a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 2vw;
+  text-decoration: none;
+  padding: 0.8vw;
+  margin-top: 2vw;
+  border-radius: 0.4vw;
+  background-color: #e0092d;
+  -webkit-box-shadow: 5px 5px 10px #272727;
+          box-shadow: 5px 5px 10px #272727;
+  color: #ffffff;
+  -webkit-transition-property: background-color, -webkit-box-shadow;
+  transition-property: background-color, -webkit-box-shadow;
+  transition-property: box-shadow, background-color;
+  transition-property: box-shadow, background-color, -webkit-box-shadow;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+body #goToEdit a:hover {
+  background-color: #050505;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+
+body #goToEdit a:active {
+  background-color: #383838;
 }
 
 body #layoutHeader {

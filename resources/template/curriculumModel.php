@@ -1,14 +1,11 @@
 <?php
-$inputs = [
-    "picture", "name", "from", "birth", "phone", "email", "link", "title1",
-    "text1", "title2", "text2", "title3", "text3"
-];
+
 
 ?>
 
 <section id="curriculo">
     <header>
-        
+
         <img id="curriculum_photo" src="public/uploads/<?php echo $_FILES['picture']['name'] ?>">
         <div>
             <?php
@@ -32,9 +29,7 @@ $inputs = [
     <hr>
     <article>
         <?php
-        $inputs = [
-            "title1", "text1", "title2", "text2", "title3", "text3"
-        ];
+        $inputs = $_SESSION['requiredInputs'];
 
         foreach ($_POST as $key => $value) {
             foreach ($inputs as $field) {
@@ -47,10 +42,13 @@ $inputs = [
                         }
                     }
                 }
-                
             }
         }
 
         ?>
     </article>
+
 </section>
+<div id="goToEdit">
+    <a href="/inicio">EDITAR</a>
+</div>
