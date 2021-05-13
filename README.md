@@ -5,11 +5,9 @@
 <br><br>
 
 ## What is It?
-The ** Curriculum Generator ** is a very simple project where I look to test my knowledge about PHP and SASS. I will discourse more technically about this ahead. <br>
-It doesn't have a ** true utility **, because anyone can open a simple text editor and make the same thing. I made it more of a portfolio project than a serviceable web application. <br>
+The **Curriculum Generator** is a very simple project where I look to test my knowledge about PHP and SASS. I will discourse more technically about this ahead. <br>
+It doesn't have a **true utility**, because anyone can open a simple text editor and make the same thing. I made it more of a portfolio project than a serviceable web application. <br>
 So, what it does: There are some inputs where the user inserts some data and submit it. The server process these using the * dataResolve.php * and if it is validated the server returns your curriculum with these informations.<br> 
-<br>
-<br>
 
 ### My Personal Considerations
 It took me **3 days** of work. At the first one, I focused on the directories structure, the web routes (considering a type of friendly URL), and how I would render the pages.<br>
@@ -18,6 +16,8 @@ I could have finished it even earlier but the security would be less because the
 
 #### About the beauty of the code...
 I'm conscient that the code isn't clean or even easily understandable, but I haven't spent much time looking at it because It would take me a little more time. As I was focusing on fast code, I didn't give too much attention to this question.
+<br>
+<br>
 
 ## Technical Stuffs
 Basically what happens in the application is: 
