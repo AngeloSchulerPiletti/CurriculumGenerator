@@ -2,7 +2,7 @@
   @keyframes here {
     0% {
       opacity: 0;
-      transform: translateY(-2vw);
+      transform: translateY(-4vw);
     }
     100% {
       opacity: 1;
@@ -16,7 +16,7 @@
     }
     100% {
       opacity: 0;
-      transform: translateY(-2vw);
+      transform: translateY(-5vw);
     }
   }
 
@@ -39,6 +39,9 @@
     }
     div {
       #messagesContainer {
+          position: relative;
+        z-index: 10;
+
         div {
           padding: 0.6vw;
           color: $red2;
@@ -57,19 +60,23 @@
         color: $white;
         margin-bottom: 1vw;
         padding: 0.6vw;
+        
+        position: relative;
+        z-index: 11;
 
         h1 {
           @include Font1();
           font-size: 2vw;
+
+          
         }
       }
     }
-  }
-
-  [data-anim="hide"] {
-    animation: nothere 800ms ease-in 0ms 1 normal both;
-  }
-  [data-anim="show"] {
-    animation: here 400ms ease-in-out 0ms 1 normal both;
+    [data-anim="hide"] {
+      animation: nothere 400ms ease-in 0ms 1 normal both;
+    }
+    [data-anim="show"] {
+      animation: here 400ms ease-in-out 0ms 1 normal both;
+    }
   }
 }

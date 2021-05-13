@@ -189,8 +189,8 @@ body main {
 @-webkit-keyframes here {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-2vw);
-            transform: translateY(-2vw);
+    -webkit-transform: translateY(-4vw);
+            transform: translateY(-4vw);
   }
   100% {
     opacity: 1;
@@ -202,8 +202,8 @@ body main {
 @keyframes here {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-2vw);
-            transform: translateY(-2vw);
+    -webkit-transform: translateY(-4vw);
+            transform: translateY(-4vw);
   }
   100% {
     opacity: 1;
@@ -220,8 +220,8 @@ body main {
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(-2vw);
-            transform: translateY(-2vw);
+    -webkit-transform: translateY(-5vw);
+            transform: translateY(-5vw);
   }
 }
 
@@ -233,8 +233,8 @@ body main {
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(-2vw);
-            transform: translateY(-2vw);
+    -webkit-transform: translateY(-5vw);
+            transform: translateY(-5vw);
   }
 }
 
@@ -254,6 +254,11 @@ body main #form_errors button {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 1.2vw;
+}
+
+body main #form_errors div #messagesContainer {
+  position: relative;
+  z-index: 10;
 }
 
 body main #form_errors div #messagesContainer div {
@@ -276,6 +281,8 @@ body main #form_errors div div:first-child {
   color: #ffffff;
   margin-bottom: 1vw;
   padding: 0.6vw;
+  position: relative;
+  z-index: 11;
 }
 
 body main #form_errors div div:first-child h1 {
@@ -284,12 +291,12 @@ body main #form_errors div div:first-child h1 {
   font-size: 2vw;
 }
 
-body main [data-anim="hide"] {
-  -webkit-animation: nothere 800ms ease-in 0ms 1 normal both;
-          animation: nothere 800ms ease-in 0ms 1 normal both;
+body main #form_errors [data-anim="hide"] {
+  -webkit-animation: nothere 400ms ease-in 0ms 1 normal both;
+          animation: nothere 400ms ease-in 0ms 1 normal both;
 }
 
-body main [data-anim="show"] {
+body main #form_errors [data-anim="show"] {
   -webkit-animation: here 400ms ease-in-out 0ms 1 normal both;
           animation: here 400ms ease-in-out 0ms 1 normal both;
 }
