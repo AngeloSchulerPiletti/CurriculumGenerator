@@ -1,6 +1,4 @@
 # Curriculum Generator
-<img src="./assets/readme/Print1.png">
-<img src="./assets/readme/Print2.png">
 <img src="./assets/readme/Print3.png">
 <br><br>
 
@@ -18,6 +16,9 @@ I could have finished it even earlier but the security would be less because the
 I'm conscient that the code isn't clean or even easily understandable, but I haven't spent much time looking at it because It would take me a little more time. As I was focusing on fast code, I didn't give too much attention to this question.
 <br>
 <br>
+<img src="./assets/readme/Print1.png">
+<img src="./assets/readme/Print2.png">
+<br>
 
 ## Technical Stuffs
 Basically what happens in the application is: 
@@ -28,7 +29,8 @@ Basically what happens in the application is:
 * The magic is done, there is your **curriculum** or the **homepage** with some error messages;
 
 #### SASS
-Just for curiosity, because I have no way to show it in prints, the UX is not so developed, but I could make some pretty designs with the "*Info Messages*" when the mouse is over the Info icon. I also created a fixed div that appears when there is some error with the form validation. Making my own "`v-if-''`" like in the Vue.JS, for each error, a `<div>` is created with the message;
+Just for curiosity, because I have no way to show it in prints, the UX is not so developed, but I could make some pretty designs with the "*Info Messages*" when the mouse is over the Info icon. I also created a fixed div that appears when there is some error with the form validation. Making my own "`v-if=''`" like in the Vue.JS, for each error, a `<div>` is created with the message;
 <br>
 <br>
+
 # Thank you for read it
